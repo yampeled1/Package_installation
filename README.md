@@ -10,7 +10,7 @@ An Ansible playbook installing a desired package and includes service check
 ### Output example
 
 A short example of an output
-Installing from master server "yamp1" Jenkins on target server "yamp2"
+- in this case installing Jenkins from master server "yamp1" on target server "yamp2"
 
 ```
 [ansible@yamp1 playbooks]$ ansible-playbook pkg_installation.yaml 
