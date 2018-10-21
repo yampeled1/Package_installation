@@ -5,7 +5,7 @@ An Ansible playbook installing a desired package and includes service check
 
 - Ansible installed on master server
 - Ansible superuser privileges on target server
-- *At this case Jenkins repos installed at target server
+- *At this case Jenkins repos and Java latetest version pre-installed at target server
 
 ### Output example
 
