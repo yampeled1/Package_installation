@@ -12,7 +12,7 @@ An Ansible playbook installing a desired package and includes service check
 A short example of an output
 
 ```
-[ansible@yamp playbooks]$ ansible-playbook pkg_installation.yaml 
+[ansible@yamp1 playbooks]$ ansible-playbook pkg_installation.yaml 
 [DEPRECATION WARNING]: DEFAULT_SUDO_USER option, In favor of Ansible Become, which is a generic 
 framework. See become_user. , use become instead. This feature will be removed in version 2.8. 
 Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
@@ -33,7 +33,7 @@ yamp2.mylabserver.com.mylabserver.com   : ok=3    changed=2    unreachable=0    
 
 ** Running again the playbook to check if it restarting the service although it already started
 
-[ansible@sagivzs5 playbooks]$ ansible-playbook pkg_installation.yaml 
+[ansible@yamp1 playbooks]$ ansible-playbook pkg_installation.yaml 
 [DEPRECATION WARNING]: DEFAULT_SUDO_USER option, In favor of Ansible Become, which is a generic 
 framework. See become_user. , use become instead. This feature will be removed in version 2.8. 
 Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
@@ -41,13 +41,13 @@ Deprecation warnings can be disabled by setting deprecation_warnings=False in an
 PLAY [centos] ***************************************************************************************
 
 TASK [Gathering Facts] ******************************************************************************
-ok: [sagivzs6.mylabserver.com]
+ok: [yamp2.mylabserver.com]
 
 TASK [Install the indicated software] ***************************************************************
-ok: [sagivzs6.mylabserver.com]
+ok: [yamp2.mylabserver.com]
 
 PLAY RECAP ******************************************************************************************
-sagivzs6.mylabserver.com   : ok=2    changed=0    unreachable=0    failed=0   
+yamp2.mylabserver.com   : ok=2    changed=0    unreachable=0    failed=0   
 
 ** There is 0 changes meaning the service has not been started again
 
