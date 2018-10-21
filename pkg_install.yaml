@@ -1,0 +1,22 @@
+--- # Automation playbook to install a package
+- hosts: '{{ target_host }}'
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    target_host: centos
+    pkg: jenkins
+  tasks:
+  - name: Install the indicated software
+    yum:
+      name: '{{ pkg }}'
+      state: latest
+    notify:
+    - start_service
+  handlers:
+  - name: start_service
+    service:
+      name: '{{ pkg }}'
+      state: restarted  
