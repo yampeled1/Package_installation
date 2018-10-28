@@ -6,7 +6,7 @@
   connection: ssh
   gather_facts: yes
   vars:
-    target_host: centos
+    target_host: pkg_install
     pkg: jenkins
   tasks:
   - name: Install the indicated software
